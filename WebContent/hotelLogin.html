@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+	 background-repeat: no-repeat;
+     background-size: cover;
+}
+</style>
+<script>
+function validateForm(){
+	var x=document.forms["myform"]["Hname"].value;
+	if(x==""){
+		alert("Enter Valid Hotel Name");
+		return false;
+	}
+	var y = document.forms["myform"]["pwd"].value;
+	if(y.length<6){
+		alert("Password should not be empty");
+		alert("password should contain minimum of 6 characters");
+		return false;
+	}
+}
+</script>
+</head>
+<body background="C:\Users\user\Downloads\login.jpg">
+<center>
+<br><br>
+<h1><font color="white"><b>Login Form</b></h1></font><br><br><br><br>
+<form action="hotelLogin"  method="POST">
+<form name = "myform" onsubmit="return validateForm()" method="post">
+
+<div class="uname">
+<p><b>Hotel Name:</b></p><input type="text"  name="Hname"  placeholder="HotelName"/><br>
+</div>
+<div class="pwd">
+<p><b>Password:</b></p><input type="password" name="pwd" placeholder="Password"/><br>
+</div>
+<br>
+<input type="submit" name="s" value="Login"/>
+</center>
+</form>
+</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+	 background-repeat: no-repeat;
+     background-size: cover;
+}
+</style>
+<script>
+function validateForm(){
+	var x=document.forms["myform"]["Hname"].value;
+	if(x==""){
+		alert("Hotel Name cannot be empty");
+		return false;
+	}
+	var y = document.forms["myform"]["pwd"].value;
+	if(y.length<6){
+		alert("password should contain minimum of 6 characters");
+		return false;
+	}
+}
+</script>
+</head>
+<body background="https://media.istockphoto.com/photos/art-italian-homemade-menu-food-background-restaurant-week-picture-id486709718">
+
+<form action="hotelRegister"  method="POST">
+<form name = "myform" onsubmit="return validateForm()" method="post">
+
+<center><br><br><br><br><br><br>
+<h1><it>Register Here!!</it></h1>
+<div class="Hname">
+<p><b>Hotel Name:</b></p><input type="text"  name="Hname"  placeholder="HotelName"/><br>
+</div>
+<div class="pwd">
+<p><b>Password:</b></p><input type="password" name="pwd" placeholder="Password"/><br><br>
+</div>
+<input type="submit" name="s" value="Register"/>
+</center>
+</form></form>
+</body>
+</html>
